@@ -9,9 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var edtemail: UITextField!
+    @IBOutlet weak var txtpassword: UITextField!
     @IBAction func btnlogin(_ sender: UIButton) {
-        print("please inter your email")
-        
+        if edtemail.text != "" &&
+            txtpassword.text != "" {
+            print("successful")
+        } else {
+            print("fill the information")
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
